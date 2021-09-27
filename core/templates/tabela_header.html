@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"> # </th>
+            <th scope="col"> Nome </th>
+            <th scope="col"> Preço </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- Pra cada produto in page_obj (do próprio django) -->
+        {% for produto in page_obj %}
+            <tr>
+                <th scope="row"> {{ produto.id }} </th>
+                <th scope="row"> {{ produto.nome }} </th>
+                <th scope="row"> {{ produto.preco }} </th>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
